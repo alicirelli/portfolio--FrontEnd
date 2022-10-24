@@ -1,0 +1,17 @@
+<div class="description"> 
+    <h4> {{experience.puesto}}</h4>
+    {{experience.empresa}} | {{experience.fecha_inicio}} - {{experience.fecha_fin}} 
+    <p class="description">{{experience.descripcion}}</p>
+    <div id="edition-delete">
+      <app-edit [editTitle]="['Puesto', 'Empresa','Fecha Inicio', 'Fecha Fin','Descripción']"
+      [entidad]="'experience'"
+      [id_entidad]="experience.id"
+      [editParams]="['puesto', 'empresa', 'fecha_inicio','fecha_fin','descripcion']"
+    >
+      ></app-edit>
+      <app-delete
+      [entidad]="'experience'"
+      [id_entidad]= "experience.id"
+      ></app-delete>
+    </div>  
+  </div>

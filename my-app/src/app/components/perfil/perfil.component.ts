@@ -1,0 +1,21 @@
+import { Component, OnInit } from '@angular/core';
+import { Persona } from 'src/app/model/persona.model';
+import { PersonaService } from 'src/app/services/persona.service';
+
+@Component({
+  selector: 'app-perfil',
+  templateUrl: './perfil.component.html',
+  styleUrls: ['./perfil.component.css']
+})
+export class PerfilComponent implements OnInit {
+
+  persona: Persona = new Persona(0, "","","","","")
+
+  constructor(public personaService: PersonaService) { }
+
+  ngOnInit(): void {
+    this.personaService.getPersona().subscribe(data => {
+      this.persona = data[0]})
+  }
+
+}

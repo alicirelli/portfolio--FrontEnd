@@ -1,0 +1,11 @@
+<div class="bg-image">
+    <img src={{persona.banner}} />
+</div>
+<div id="edition-delete">
+    <app-edit 
+    [editTitle]="['Ingresar URL imagen']" 
+    [entidad]="'persona'"
+    [id_entidad]="persona.id"  
+    [editParams]="['banner']"
+    ></app-edit>
+</div>  

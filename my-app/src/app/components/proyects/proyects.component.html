@@ -1,0 +1,21 @@
+<div class="container" id="proyects">
+    <div class="text-content">
+      <h3 >
+        PROYECTOS
+      </h3>
+      
+      <div *ngFor="let work of works">
+        <app-project [project]="work">
+          
+        </app-project>
+      </div >
+    </div>
+
+    <div id="edition-delete">
+      <app-add
+      [createTitle]="['Titulo','Descripción','Año']" 
+          [entidad]="'project'"
+          [createParams]="['titulo', 'descripcion', 'ano']"
+      ></app-add>
+    </div>
+  </div>

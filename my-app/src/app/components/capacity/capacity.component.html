@@ -1,0 +1,171 @@
+<div class="container-fluid" id="history">
+    <div class="text-content" id="hard">
+      <h3 >
+        HARD & SOFT SKILLS
+      </h3>
+    </div>
+    <div class="grilla">
+      <div *ngFor="let ski of skill">
+        <app-singleskill [skill]="ski">
+        </app-singleskill>
+      </div >
+
+      <!-- <div class="capacity">
+        <div class="skills">
+          <h4> PRODUCTIVIDAD </h4>
+        </div>
+        <div class="skills">
+          <div class="point">
+          </div>
+          <div class="point">
+          </div>
+          <div class="point">
+          </div>
+          <div class="point">
+          </div>
+          <div class="nopoint">
+          </div>
+        </div>
+        <div id="edition-delete">
+          <app-edit [editTitle]="['Skill','Nivel del 1 al 5']"></app-edit>
+          <app-delete></app-delete>
+        </div>
+      </div>
+      
+      <div class="capacity">
+        <div class="skills">
+          <h4> COOPERATIVISMO </h4>
+        </div>
+        <div class="skills">
+          <div class="point">
+          </div>
+          <div class="point">
+          </div>
+          <div class="point">
+          </div>
+          <div class="point">
+          </div>
+          <div class="nopoint">
+          </div>
+        </div>
+        <div id="edition-delete">
+          <app-edit [editTitle]="['Skill','Nivel del 1 al 5']"></app-edit>
+          <app-delete></app-delete>
+        </div>
+      </div>
+      <div class="capacity">
+        <div class="skills">
+          <h4> GESTIÓN </h4>
+        </div>
+        <div class="skills">
+          <div class="point">
+          </div>
+          <div class="point">
+          </div>
+          <div class="point">
+          </div>
+          <div class="nopoint">
+          </div>
+          <div class="nopoint">
+          </div>
+        </div>
+        <div id="edition-delete">
+          <app-edit [editTitle]="['Skill','Nivel del 1 al 5']"></app-edit>
+          <app-delete></app-delete>
+        </div>
+      </div>
+      <div class="capacity">
+        <div class="skills">
+          <h4> DATA ENTRY </h4>
+        </div>
+        <div class="skills">
+          <div class="point">
+          </div>
+          <div class="point">
+          </div>
+          <div class="point">
+          </div>
+          <div class="nopoint">
+          </div>
+          <div class="nopoint">
+          </div>
+        </div>
+        <div id="edition-delete">
+          <app-edit [editTitle]="['Skill','Nivel del 1 al 5']"></app-edit>
+          <app-delete></app-delete>
+        </div>
+      </div>
+      <div class="capacity">
+        <div class="skills">
+          <h4> HTML/CSS </h4>
+        </div>
+        <div class="skills">
+          <div class="point">
+          </div>
+          <div class="point">
+          </div>
+          <div class="point">
+          </div>
+          <div class="nopoint">
+          </div>
+          <div class="nopoint">
+          </div>
+        </div>
+        <div id="edition-delete">
+          <app-edit [editTitle]="['Skill','Nivel']"></app-edit>
+          <app-delete></app-delete>
+        </div>
+      </div>
+      <div class="capacity">
+        <div class="skills">
+          <h4> ANGULAR </h4>
+        </div>
+        <div class="skills">
+          <div class="point">
+          </div>
+          <div class="point">
+          </div>
+          <div class="nopoint">
+          </div>
+          <div class="nopoint">
+          </div>
+          <div class="nopoint">
+          </div>
+        </div>
+        <div id="edition-delete">
+          <app-edit [editTitle]="['Skill','Nivel']"></app-edit>
+          <app-delete></app-delete>
+        </div>
+      </div> -->
+      <div id="add">
+        <app-add
+        [createTitle]="['Nombre skill','Nivel']" 
+        [entidad]="'skill'"
+        [createParams]="['nombre', 'nivel']"
+        ></app-add>
+      </div>
+    </div>
+    
+    <div class="text-content">
+      <h4> IDIOMAS</h4>
+      <p class="description">
+      <h4>{{language.idioma}}</h4>
+<!--       <div id="add">
+        <app-add
+        [createTitle]="['Idioma y nivel']" 
+        [entidad]="'language'"
+        [createParams]="['idioma']"
+        ></app-add> -->
+      <div id="edition-delete-id">
+        <app-edit 
+        [editTitle]="['Idioma y nivel']"
+        [entidad]="'language'"
+        [id_entidad]="language.id"
+        [editParams]="['idioma']"
+        ></app-edit>
+                  
+      </div>
+    </div>
+    
+  </div>
+ 

@@ -1,0 +1,9 @@
+.description {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+#edition-delete {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

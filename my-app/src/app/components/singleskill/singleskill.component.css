@@ -1,0 +1,49 @@
+.nopoint {
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
+    margin: 10px;
+
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    background-color: #D9D9D9;
+}
+
+.point {
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
+    margin: 10px;
+    background-color: #A0585A;
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+}
+
+
+
+.capacity {
+    background-color: rgba(251, 233, 203, 0.5);
+    border-radius: 15%;
+/*     width: 18%; */
+    height: 250px;
+    margin: 0 7.16%;
+    margin-bottom: 5%;
+    padding-top: 25px;
+}
+
+.skills {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+#edition-delete {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,44 @@
+<!-- <div *ngIf="isLogged; else loggedOut"> 
+  Has iniciado sesión.
+</div> -->
+<div>
+  <button type="button" class="mybutton" (click)="open(mymodal)" *ngIf="!isLogged">INICIAR SESIÓN</button>
+  <button type="button" class="mybutton" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESIÓN</button>
+
+  <ng-template #mymodal let-modal>
+    <div id="modal">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Iniciar sesión</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">×</span>
+        </button>
+        <p hidden="true">
+          Usuario y/o contraseña invalidos. Intente nuevamente.
+        </p>
+      </div>
+      <div class="modal-body" class="form-login">
+        <form #f="ngForm" (ngSubmit)="OnLogin()" novalidate>
+
+          <input class="controls" type="text" name="nombreUsuario" value="" for="nombreUsuario"
+            [(ngModel)]="nombreUsuario" required placeholder="Usuario">
+
+          <input class="controls" type="password" name="password" value="" for="password" [(ngModel)]="password"
+            required placeholder="Contraseña">
+
+          <input class="buttons" type="submit" name="" value="Ingresar" [disabled]="!f.valid" (click)="modal.dismiss('Ingresar Button')">
+    
+        </form>
+        <div *ngIf="f.submitted && isLoginFail" class="alert alert-danger mt-3">
+          Usuario y/o contraseña inválidos
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <a href="#" routerLink="/registro">Crear cuenta</a>
+        
+        <button type="button" class="btn btn-outline-dark" (click)="modal.dismiss('Cancel Button')">Cancelar</button>
+      </div>
+    </div>
+  </ng-template>
+
+</div>

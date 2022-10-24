@@ -1,0 +1,28 @@
+<div class="capacity">
+    <div class="skills">
+      <h4> {{skill.nombre}} </h4>
+    </div>
+    <div class="skills">
+      <div *ngFor="let keys of getPoints() ">
+        <div class="point">
+        </div>
+      </div>
+      <div *ngFor="let keys of getNoPoints()" > 
+        <div class="nopoint">
+        </div>
+      </div>  
+    </div>
+    
+    <div id="edition-delete">
+      <app-edit [editTitle]="['Nombre Skill','Nivel del 1 al 5']"
+      [entidad]="'skill'"
+      [id_entidad]="skill.id"
+      [editParams]="['nombre', 'nivel']"
+      ></app-edit>
+      <app-delete
+      [entidad]="'skill'"
+      [id_entidad]= "skill.id"
+      ></app-delete>
+    </div>
+  </div>
+  

@@ -1,0 +1,20 @@
+<div class="description">
+    <h4> {{education.titulo}}</h4>
+    <p>
+        {{education.institucion}}
+    </p>
+    <p>{{education.fecha_inicio}} - {{education.fecha_fin}}
+    </p>
+    <div id="edition-delete">
+        <app-edit [editTitle]="['Titulo', 'Institución','Fecha Inicio', 'Fecha Fin']"
+        [entidad]="'education'"
+        [id_entidad]="education.id"
+        [editParams]="['titulo', 'institucion', 'fecha_inicio','fecha_fin']"
+        ></app-edit>
+      <app-delete
+      [entidad]="'education'"
+      [id_entidad]= "education.id"
+      ></app-delete>
+      
+    </div>
+  

@@ -1,0 +1,21 @@
+.navbar {
+    background-color: #BDB2AD;
+     height: 85px;
+     align-items: center;
+     display: flex;
+    flex-wrap: nowrap;
+}
+app-icons {
+    float:right;
+    width: 129px;
+    right:0px;
+    position: absolute;
+    margin-right: 180px;
+   
+}
+
+app-login{
+    float: right;
+    right: 0px;
+   position: absolute;
+}

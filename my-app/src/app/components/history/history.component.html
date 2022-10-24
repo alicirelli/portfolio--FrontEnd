@@ -1,0 +1,57 @@
+<div class="container-fluid" id="history">
+    <div class="text-content">
+      <h3 >
+        HISTORIA LABORAL
+      </h3>
+     <div *ngFor="let exp of experiencia ">
+        <app-singlehistory [experience]="exp">
+        </app-singlehistory>
+      </div >
+<!-- 
+      <div class="description"> 
+        <h4> Encargada de depósito</h4>
+        Huella Sagrada Distribuidora | Septiembre 2021 - Marzo 2022 / Buenos Aires, Argentina
+        <p class="description">Desempeño en fraccionamiento y envasado de alimentos, armado de pedidos y control de
+        stock en distribuidora
+        de alimentos.</p>
+        <div id="edition-delete">
+          <app-edit [editTitle]="['Puesto', 'Empresa','Fecha Inicio', 'Fecha Final','Descripción']"></app-edit>
+          <app-delete></app-delete>
+        </div>  
+      </div>
+
+      <div class="description">
+      <h4> Venta y atención al público</h4>
+      ChacaPhone | Octubre 2020 - Junio 2021/ Buenos Aires, Argentina
+      <p class="description"> Desempeño en venta y atención al público, carga de stock y mercaderia, manejo de caja
+        chica para local de
+        telefonia y accesorios.
+        <div id="edition-delete">
+          <app-edit></app-edit>
+          <app-delete></app-delete>
+        </div>
+      </div>
+
+      <div class="description">
+      <h4> Gestión administrativa</h4>
+      Cirelli Aberturas | Enero 2014 - Enero 2015/ Rio Negro, Argentina
+      <p class="description"> Desempeño en administración de recursos, gestión de personal, atención al público para
+        importante
+        metalurgica del sur argentino.
+        <div id="edition-delete">
+          <app-edit></app-edit>
+          <app-delete></app-delete>
+        </div>
+      </div>
+ -->      
+      <div id="add"> 
+        <app-add
+        [createTitle]="['Puesto','Empresa','Fecha inicio', 'Fecha fin', 'Descripción']" 
+        [entidad]="'experience'"
+        [createParams]="['puesto', 'empresa', 'fecha_inicio','fecha_fin','descripcion']"
+      >
+        ></app-add>
+      </div>
+    </div>
+  
+  </div>

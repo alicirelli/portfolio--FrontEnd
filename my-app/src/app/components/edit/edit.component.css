@@ -1,0 +1,25 @@
+img {
+
+height: 24px;
+
+}
+
+#staticBackdrop {
+    padding: 16px;
+    background: rgba(0,0,0,0.35);
+    align-items: center;
+    justify-content: center;
+    overflow-y:auto;
+    z-index: 999999;
+}
+.btn-safe{
+    background: #F9E6DF;
+}
+.controls{
+    font-size: 14px;
+        font-weight: normal;
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 11px 10px;
+            
+}

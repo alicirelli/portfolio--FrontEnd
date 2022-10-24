@@ -1,0 +1,29 @@
+#about {
+
+    padding: 25px;
+    margin-top: 200px;
+
+    background: rgba(251, 233, 203, 0.5);
+    border-radius: 50px;
+    margin-bottom: 40px;
+}
+.text-content {
+
+    font-weight: 250;
+    font-size: 24px;
+    line-height: 200%;
+
+
+    letter-spacing: 0.1em;
+
+    color: #000000;
+}
+.description {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+#edition-delete {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

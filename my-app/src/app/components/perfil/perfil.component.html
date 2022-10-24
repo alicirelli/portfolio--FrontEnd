@@ -1,0 +1,24 @@
+<div class="profile">
+    <div class="background-circle">
+      <div class="circle" [ngStyle]="{'background-image': 'url(' + persona.imagen + ')'}">
+      </div>
+    
+    </div>
+    <div id="edition-delete">
+      <app-edit [editTitle]="['Ingresar URL de la imagen']" [entidad]="'persona'"></app-edit>
+      
+    </div>
+    <div class="name">
+      <h1> {{persona.nombre}} {{persona.apellido}} </h1>
+      <p class="p"> {{persona.profesion}} </p>
+    </div>
+    <div class="edit-container">
+      <app-edit 
+        [editTitle]="['Nombre','Apellido','Profesión']" 
+        [entidad]="'persona'"
+        [id_entidad]="persona.id"  
+        [editParams]="['nombre', 'apellido', 'profesion']"
+      >
+      </app-edit>
+    </div>
+  </div>

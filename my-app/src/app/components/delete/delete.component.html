@@ -1,0 +1,22 @@
+<div *ngIf="isLogged">
+    <img src="../../../assets/bx-trash.svg" (click)="open(mymodal)">
+
+    <!-- Modal -->
+  <ng-template #mymodal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Confirmación</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    <form (ngSubmit)="deleteData()" >
+      <div class="modal-body" >
+        <p>¿Desea realmente eliminar este campo?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-safe" type="submit" (click)="modal.dismiss('delete Button')">Eliminar</button>
+        <button type="button" class="btn btn-outline-dark" (click)="modal.dismiss('Cancel Button')">Cancelar</button>
+      </div>
+    </form>
+  </ng-template>
+</div>

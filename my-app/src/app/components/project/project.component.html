@@ -1,0 +1,16 @@
+<div class="description">
+    <h4> {{project.titulo}}</h4>
+    {{project.descripcion}} {{project.ano}}
+    <div id="edition-delete">
+        <app-edit [editTitle]="['Titulo','Descripción', 'Año']"
+        [entidad]="'project'"
+        [id_entidad]="project.id"
+        [editParams]="['titulo','descripcion', 'ano']"
+        ></app-edit>
+      <app-delete
+          [entidad]="'project'"
+          [id_entidad]= "project.id"
+      ></app-delete>
+      
+    </div>
+    </div>

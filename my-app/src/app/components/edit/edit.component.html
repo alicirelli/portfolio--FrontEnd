@@ -1,0 +1,24 @@
+<div *ngIf="isLogged">
+  <img src="../../../assets/bxs-edit.svg" (click)="open(mymodal)">
+
+
+  <!-- Modal -->
+  <ng-template #mymodal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Editar información</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    <form (ngSubmit)="saveData()" [formGroup]="dataForm">
+      <div class="modal-body" *ngFor="let data of dataForm.controls | keyvalue">
+        <p>{{data.key}}</p>
+        <input class="controls" type="text" [formControlName]="data.key" name="{{data.key}}" value="" placeholder="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-safe" type="submit" (click)="modal.dismiss('Save Button')">Guardar</button>
+        <button type="button" class="btn btn-outline-dark" (click)="modal.dismiss('Cancel Button')">Cancelar</button>
+      </div>
+    </form>
+  </ng-template>
+</div>

@@ -1,0 +1,15 @@
+<div class="container" id="about">
+    <div class="text-content text-center">
+      <h2>{{about.titulo}}  </h2>
+      <p class="description"> {{about.descripcion}}  </p>
+      <div id="edition-delete">
+        <app-edit [editTitle]="['Titulo','Realice una breve descripción personal']"
+                  [entidad]="'about'"
+                  [id_entidad]="about.id"  
+                  [editParams]="['titulo', 'descripcion']"
+        ></app-edit>
+        
+      </div>
+    </div>
+    
+  </div>
